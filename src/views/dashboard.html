@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/src/css/dashboard.css">
+</head>
+<body>
+  <div class="dashboard">
+    <div class="input-box">
+      <h3>Registro de Ingresos</h3>
+      <input type="number" id="incomeInput" placeholder="Cantidad de ingreso">
+      <button onclick="addIncome()">Guardar</button>
+    </div>
+    <div class="input-box">
+      <h3>Registro de Gastos</h3>
+      <input type="number" id="expenseInput" placeholder="Cantidad de gasto">
+      <input type="text" id="expenseDescription" placeholder="Descripción del gasto">
+      <button onclick="addExpense()">Guardar</button>
+    </div>
+    <div class="display-box">
+      <h3>Ingresos</h3>
+      <p id="displayIncome">$0</p>
+    </div>
+    <div class="display-box">
+      <h3>Gastos</h3>
+      <p id="displayExpense">$0</p>
+      <p id="expenseWarning"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
