@@ -34,6 +34,24 @@
   --primary-focus: rgba(216, 27, 96, 0.125);
   --primary-inverse: #FFF;
 }
+
+#header-nav{
+  background-color: #ffffff; 
+}
+
+#header-nav nav strong {
+  color: purple;
+  font-size: 24px; 
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  #header-nav nav strong {
+    font-size: 16px; 
+  }
+}
+
+
 #montoIngreso{
   border-radius: 40px;
 }
