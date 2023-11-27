@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="/src/css/dashboard.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
-  <div class="dashboard">
-    <div class="input-box">
-      <h3>Registro de Ingresos</h3>
-      <input type="number" id="incomeInput" placeholder="Cantidad de ingreso">
-      <button onclick="addIncome()">Guardar</button>
-    </div>
-    <div class="input-box">
-      <h3>Registro de Gastos</h3>
-      <input type="number" id="expenseInput" placeholder="Cantidad de gasto">
-      <input type="text" id="expenseDescription" placeholder="Descripción del gasto">
-      <button onclick="addExpense()">Guardar</button>
-    </div>
-    <div class="display-box">
-      <h3>Ingresos</h3>
-      <p id="displayIncome">$0</p>
-    </div>
-    <div class="display-box">
-      <h3>Gastos</h3>
-      <p id="displayExpense">$0</p>
-      <p id="expenseWarning"></p>
-    </div>
-  </div>
+    <main class="grid" style="padding: 0;">
 
-  <script src="script.js"></script>
+        <div class="container-fluid">
+            <article>
+                <form class="form" >
+                    <p>Registro Ingresos</p>
+                    <label for="montoIngreso">
+                        Monto
+                        <input type="number" id="montoIngreso">
+                    </label>
+        
+                    <label for="descripcionIngreso">
+                        Descripcion
+                        <input type="text" id="descripcionIngreso">
+                    </label>
+                    <button type="submit" onclick="">Añadir</button>
+                </form>
+            </article>
+
+            <article>
+                <span>Ingresos</span>
+                <p id="ingresosUsuario">0.00$</p>
+            </article>
+        </div>
+
+        <div class="container-fluid">
+            <article >
+                <form class="form">
+                    <p>Registro Gastos</p>
+                    <label for="montoGasto">
+                        Monto
+                        <input type="number" id="montoGasto">
+                    </label>
+        
+                    <label for="descripcionGasto">
+                        Descripcion
+                        <input type="text" id="descripcionGasto">
+                    </label>
+                    <button type="submit" onclick="">Añadir</button>
+                </form>
+            </article>
+
+            <article>
+                <span>Gastos</span>
+                <p id="gastosUsuario">0.00$</p>
+            </article>
+        </div>
+
+        <div class="container-fluid">
+            <article >
+                <p>Indicador Financiero</p>
+                <article>
+                    <p id="indicardorFinanciero">0.00$</p>
+                </article>
+            </article>
+        </div>
+
+    </main>
+
+    <script src="../js/dashboard.js"></script>
 </body>
 </html>
