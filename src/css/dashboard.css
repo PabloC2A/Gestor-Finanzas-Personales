@@ -35,13 +35,14 @@
   --primary-inverse: #FFF;
 }
 
+
 #header-nav{
   background-color: #ffffff; 
 }
 
 #header-nav nav strong {
   color: purple;
-  font-size: 24px; 
+  font-size: 50px; 
   margin-left: 0px;
 }
 
@@ -49,6 +50,34 @@
   #header-nav nav strong {
     font-size: 16px; 
   }
+}
+
+form,
+article,
+input {
+  background-color: #b3e5fc;
+  color: black;
+}
+
+input[type="number"],
+input[type="text"] {
+  color: black;
+}
+
+
+#montoIngreso,
+#descripcionIngreso,
+#montoGasto,
+#descripcionGasto {
+  background-color: white; 
+  color: black; 
+}
+
+.container-fluid p,
+#indicardorFinanciero,
+#ingresosUsuario,
+#gastosUsuario {
+  color: black; 
 }
 
 

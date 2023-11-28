@@ -20,14 +20,15 @@
             <ul>
                 <li>
                     <details>
-                        <summary class="secondary">Resumen Valores</summary>
-                        <ul id="options">
-                            <li><a href="/src/views/gastosValores.html">Gastos</a></li>
-                            <li><a href="/src/views/ingresosValores.html">Ingresos</a></li>
+                        <summary class="secondary" aria-haspopup="listbox">Resumen Valores</summary>
+                        <ul id="options" role="listbox">
+                            <li role="option"><a href="/src/views/gastosValores.html">Gastos</a></li>
+                            <li role="option"><a href="/src/views/ingresosValores.html">Ingresos</a></li>
                         </ul>
                     </details>
                 </li>
             </ul>
+        </nav>            
     </header>
     <main class="grid" style="padding: 0;">
         <div class="container-fluid">
@@ -84,9 +85,7 @@
                 </article>
             </article>
         </div>
-
     </main>
-
     <script src="../js/dashboard.js"></script>
 </body>
 </html>
