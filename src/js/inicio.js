@@ -53,20 +53,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		indicadorFinanciero.textContent = `$${valorIndicador.toFixed(2)}`;
 
-		// Verificar si el indicador es negativo o cero
+		// Consejos financieros de acuerdo al estado del indicador financiero
 		if (valorIndicador <= 0) {
 			mostrarModal('¡Cuidado!', "Tu indicador financiero es negativo o cero. Contacta con un profesional en Finanzas");
+		} else {
+			if (totalGastos >= 0.5 * totalIngresos) {
+				mostrarModal('Advertencia', "Tus gastos han superado el 50% de tus ingresos. Es momento de ahorrar");
+			} else {
+				if (totalGastos >= 0.8 * totalIngresos) {
+					mostrarModal('Peligro', "Tus gastos han superado el 80% de tus ingresos. ¡Controla tus gastos, estas muy ajustado!");
+				}
+			}
 		}
-
-		// Verificar si los gastos superan el 80% de los ingresos
-		if (totalGastos >= 0.5 * totalIngresos) {
-			mostrarModal('Advertencia', "Tus gastos han superado el 50% de tus ingresos. Es momento de ahorrar");
-		}
-
-		// Verificar si los gastos superan el 80% de los ingresos
-		if (totalGastos >= 0.8 * totalIngresos) {
-			mostrarModal('Peligro', "Tus gastos han superado el 80% de tus ingresos. ¡Controla tus gastos, estas muy ajustado!");
-		}
+		
 	};
 
 	// Función para mostrar un modal al usuario con un titulo y mensaje para hacer de consejo financiero
@@ -97,10 +96,10 @@ document.addEventListener('DOMContentLoaded', function() {
         contenidoModal.appendChild(botonCerrar);
         modal.appendChild(contenidoModal);
     
-        // Agregar el modal al cuerpo del documento
+        // Agregar el modal al HTML
         document.body.appendChild(modal);
     
-        // Mostrar el modal
+        // Para mostrar el modal
         modal.style.display = 'flex';
       };
 
