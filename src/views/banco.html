@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco - GFP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="../css/banco.css">
+</head>
+<body>
+    <header class="container">
+        <h1>Gestor de Finanzas Personales</h1>
+        <nav>
+            <ul>
+                <li><a href="../views/inicio.html">Inicio</a></li>
+                <li><a href="../views/banco.html">Banco</a></li>
+                <li><a href="../views/tarjeta_Credito.html">Tarjeta de Credito</a></li>
+                <li><a href="#">Consejos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <form class="form">
+                <img src="../assets/img/banco.png" alt="tarjeta de Credito" width="100rem">
+                <label for="">
+                    Cedula
+                    <input type="text">
+                </label>
+                
+                <label for="">
+                    Banco
+                    <select id="tipoCuentaBanco" required>
+                        <option value="" selected>Tipo de Cuenta</option>
+                        <option>Banco Pichincha</option>
+                        <option>Banco Bolivariano</option>
+                        <option>Banco Guayaquil</option>
+                        <option>Banco de Loja</option>
+                    </select>
+                </label>
+
+                <label for="">
+                    Numero Cuenta
+                    <input type="text">
+                </label>
+                <label for="">
+                    Nombre
+                    <input type="text">
+                </label>
+                <label for="">
+                    Tipo de Cuenta
+                    <select id="tipoCuentaBanco" required>
+                        <option value="" selected>Tipo de Cuenta</option>
+                        <option>Ahorros</option>
+                        <option>Corriente</option>
+                    </select>
+                </label>
+            </form>
+        </article>
+    </main>
+</body>
+</html>
