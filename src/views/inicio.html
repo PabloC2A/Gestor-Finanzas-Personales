@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - GFP</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="../css/inicio.css">
+</head>
+<body>
+
+  <header class="container">
+    <h1>Gestor de Finanzas Personales</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Banco</a></li>
+            <li><a href="#">Tarjeta de Credito</a></li>
+            <li><a href="#">Consejos</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section>
+        <h2>Ingresos</h2>
+        <button id="añadirIngreso">Añadir Ingreso</button>
+        <ul id="listaIngresos">
+            <!-- Aqui se van añadiendo los ingresos mediante el JS-->
+        </ul>
+    </section>
+
+    <section>
+        <h2>Gastos</h2>
+        <button id="añadirGasto">Añadir Gasto</button>
+        <ul id="listaGastos">
+            <!-- Aqui se van añadiendo los gastos mediante el JS-->
+        </ul>
+    </section>
+
+    <section>
+        <h2>Indicador Financiero</h2>
+        <p id="indicadorFinanciero">0.00$</p>
+    </section>
+  </main>
+
+  <script src="../js/inicio.js"></script>
+</body>
+</html>

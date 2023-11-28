@@ -14,7 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     const user = usuarios.find(user => user.username === usuario && user.password === contrasenia);
   
     if (user) {
-      window.location.href = '../views/dashboard.html';
+      window.location.href = '../views/inicio.html';
     } else {
       alert('Incorrecto');
     }
