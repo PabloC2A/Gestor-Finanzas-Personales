@@ -1,27 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - GFP</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-  <link rel="stylesheet" href="../css/login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
+    <main class="container">
+        <h1 class="title">Gestor de Finanzas Personales</h1>
 
-  <div class="container">
-    <p>Gestor de Finanzas Personales- GFP</p>
-    <form id="loginForm" class="form">
-      <label for="username">Usuario:</label>
-      <input type="text" id="username" required>
+        <form class="form">
+            <label for="username">
+                Usuario
+                <input type="text" id="username" placeholder="Usuario">
+            </label>
 
-      <label for="password">Contraseña:</label>
-      <input type="password" id="password" required>
+            <label for="password">
+                Contraseña
+                <input type="password" id="password" placeholder="Contraseña">
+            </label>
 
-      <button type="submit">Ingresar</button>
-    </form>
-  </div>
-
-  <script src="../js/login.js"></script>
+            <button type="button" onclick="Login()">Iniciar Sesión</button>
+        </form>
+    </main>
+    <script src="../js/index.js"></script>
 </body>
 </html>
