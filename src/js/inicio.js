@@ -1,3 +1,4 @@
+// cuando ya esta cargo el script 
 document.addEventListener('DOMContentLoaded', function() {
 	// Obtener todos los datos disponibles como botones y listas
 	const botonIngreso = document.getElementById('añadirIngreso');
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	// Función para agregar transacciones segun el tipo (ingreso o gasto)
 	const agregarTransaccion = (tipo) => {
-
+		//el parseFloat (para transformar a un string) 
 		const monto = parseFloat(prompt(`Ingrese el monto del ${tipo}:`));
 
 		if (isNaN(monto)) {
@@ -27,8 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		const transaccion = crearElementoTransaccion(monto, tipo);
 
-		// Agregar a (HTML = li) la transaccion segun a que lista corresponda (listaIngreso/listaGasto)
+		// Agregar a (HTML = li)= la transaccion segun a que lista corresponda (listaIngreso/listaGasto)
 		if (tipo === 'ingreso') {
+			// appendchild es para agregar un elemento al html padre
 			listaIngresos.appendChild(transaccion);
 		} else {
 			listaGastos.appendChild(transaccion);
@@ -41,7 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	// Funcion para crear elementos para (HTML ul => li)
 	const crearElementoTransaccion = (monto, tipo) => {
 		const elementoTransaccion = document.createElement('li');
-		elementoTransaccion.textContent = `${tipo.charAt(0).toUpperCase() + tipo.slice(1)}: $${monto.toFixed(2)}`;
+		// charAt pone en mayuscula la primera letra en la posicion 0
+		// toUppercase para poner en mayuscula la primera letra
+		// toFixed para redondear a dos decimales 
+		// Slice separa partir de la pociciondeseada 
+		elementoTransaccion.textContent = `${tipo.charAt(0).toUpperCase() + tipo.slice(1)}: $${monto.toFixed(2)}`; 
 		return elementoTransaccion;
 	};
 
@@ -112,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		}, 0);
 	};
 
-	// Cargar transacciones almacenadas al cargar la página
+	// permite realizar acciones cuando el DOM se encuentra ready 
 	document.addEventListener('DOMContentLoaded', () => {
 		actualizarIndicadorFinanciero();
 	});
